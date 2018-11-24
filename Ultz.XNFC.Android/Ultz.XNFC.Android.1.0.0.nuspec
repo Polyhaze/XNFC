@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Ultz.XNFC.Android</id>
+    <version>1.0.0</version>
+    <title></title>
+    <authors>Ultz</authors>
+    <owners>Ultz</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <licenseUrl>https://stash.onultz.com/projects/XP/repos/xnfc/browse/LICENSE</licenseUrl>
+    <projectUrl>https://stash.onultz.com/projects/XP/</projectUrl>
+    <description>XNFC is a Xamarin NFC library, which can read and write NFC tags on Xamarin platforms.</description>
+    <releaseNotes>- Initial Release</releaseNotes>
+    <copyright>Copyright (c) 2018 Ultz Limited</copyright>
+    <dependencies>
+      <group targetFramework="MonoAndroid8.0">
+        <dependency id="Ultz.XNFC" version="1.0.0" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="lib\MonoAndroid8.0\Ultz.XNFC.Android.dll" target="lib\MonoAndroid8.0\Ultz.XNFC.Android.dll" />
+  </files>
+</package>

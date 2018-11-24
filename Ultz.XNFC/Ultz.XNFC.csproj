@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Authors>Ultz</Authors>
+    <Company>Ultz Limited</Company>
+    <Product>XNFC</Product>
+    <Description>XNFC is a Xamarin NFC library, which can read and write NFC tags on Xamarin platforms.</Description>
+    <Copyright>Copyright (c) 2018 Ultz Limited</Copyright>
+    <PackageLicenseUrl>https://stash.onultz.com/projects/XP/repos/xnfc/browse/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://stash.onultz.com/projects/XP/</PackageProjectUrl>
+    <RepositoryUrl>https://stash.onultz.com/projects/XP/repos/xnfc/</RepositoryUrl>
+    <RepositoryType>Git</RepositoryType>
+    <PackageTags>nfc xamarin netstandard</PackageTags>
+    <PackageReleaseNotes>- Initial release</PackageReleaseNotes>
+  </PropertyGroup>
+
+</Project>
