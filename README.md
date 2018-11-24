@@ -27,11 +27,8 @@ The most basic use:
 ```cs
 // get an API instance
 var xnfc = XNFC.GetApi();
-xnfc.TagDetected += (sender,e) => { Console.WriteLine("Got NFC Tag!"); foreach (var record in e.Records)
-{Console.WriteLine("Data: "+record.Payload);} XNFC.GloballyStopListening();};
-// you can use xnfc.StartListeningAsync(), but we added a global feature so that you don't have to
-destroy your head trying to get a callback.
-// note that only one API instance can be globally listening; and if you call
-this method again while another listener is active, the currently listening listener never receives anything.
+xnfc.TagDetected += (sender,e) => { Console.WriteLine("Got NFC Tag!"); foreach (var record in e.Records){Console.WriteLine("Data: "+record.Payload);} XNFC.GloballyStopListening();};
+// you can use xnfc.StartListeningAsync(), but we added a global feature so that you don't have to destroy your head trying to get a callback.
+// note that only one API instance can be globally listening; and if you call this method again while another listener is active, the currently listening listener never receives anything.
 XNFC.GloballyStartListening(xnfc);
 ```
