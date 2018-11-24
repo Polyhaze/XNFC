@@ -12,7 +12,8 @@
     <RepositoryUrl>https://stash.onultz.com/projects/XP/repos/xnfc/</RepositoryUrl>
     <RepositoryType>Git</RepositoryType>
     <PackageTags>nfc xamarin netstandard</PackageTags>
-    <PackageReleaseNotes>- Initial release</PackageReleaseNotes>
+    <PackageReleaseNotes>- Added the ability to get the global association. This will let you check if NFC is available.</PackageReleaseNotes>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
 </Project>

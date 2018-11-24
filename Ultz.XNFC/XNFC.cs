@@ -7,7 +7,7 @@ namespace Ultz.XNFC
     {
         private static Type _type;
         private static ICrossNearFieldCommunication _nfc;
-        private static object _association;
+        public static object Association { get; private set; }
         public static ICrossNearFieldCommunication GetApi()
         {
             return (ICrossNearFieldCommunication) Activator.CreateInstance(_type);
@@ -17,7 +17,7 @@ namespace Ultz.XNFC
         public static void GloballyStartScanning(ICrossNearFieldCommunication nfc)
         {
             _nfc = nfc;
-            _nfc.Association = _association;
+            _nfc.Association = Association;
             _nfc.Initialize();
             _nfc.StartListeningAsync().GetAwaiter().GetResult();
         }
@@ -35,7 +35,7 @@ namespace Ultz.XNFC
 
         public static void GloballyAssociate(object obj)
         {
-            _association = obj;
+            Association = obj;
         }
         public static void Register<T>() where T : ICrossNearFieldCommunication
         {
