@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2036
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ultz.XNFC", "Ultz.XNFC\Ultz.XNFC.csproj", "{EE837790-1573-4C68-A5C5-25BC65DFAD26}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ultz.XNFC", "src\Ultz.XNFC\Ultz.XNFC.csproj", "{EE837790-1573-4C68-A5C5-25BC65DFAD26}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ultz.XNFC.Android", "Ultz.XNFC.Android\Ultz.XNFC.Android.csproj", "{53C50C86-1136-464A-9BEF-4249A8416913}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ultz.XNFC.Android", "src\Ultz.XNFC.Android\Ultz.XNFC.Android.csproj", "{53C50C86-1136-464A-9BEF-4249A8416913}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ultz.XNFC.iOS", "Ultz.XNFC.iOS\Ultz.XNFC.iOS.csproj", "{E71F3053-056C-4381-9638-048ED73BDFF6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ultz.XNFC.iOS", "src\Ultz.XNFC.iOS\Ultz.XNFC.iOS.csproj", "{E71F3053-056C-4381-9638-048ED73BDFF6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XnfcTest.Android", "XnfcTest\XnfcTest.Android\XnfcTest.Android.csproj", "{8ABC4570-2B9E-43CD-AC90-C7FCA76783AD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XnfcTest.Android", "src\XnfcTest\XnfcTest.Android\XnfcTest.Android.csproj", "{8ABC4570-2B9E-43CD-AC90-C7FCA76783AD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XnfcTest", "XnfcTest\XnfcTest\XnfcTest.csproj", "{D7472738-DA59-44DC-BC8C-5BD10E290ABB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XnfcTest", "src\XnfcTest\XnfcTest\XnfcTest.csproj", "{D7472738-DA59-44DC-BC8C-5BD10E290ABB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
