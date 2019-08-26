@@ -1,0 +1,213 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Ultz.XNFC</name>
+    </assembly>
+    <members>
+        <member name="T:Ultz.XNFC.NfcDefRecord">
+            <summary>
+            Chunk of data in <see cref="T:Ultz.XNFC.ITag"/>.
+            </summary>
+        </member>
+        <member name="P:Ultz.XNFC.NfcDefRecord.TypeNameFormat">
+            <summary>
+            Format of <see cref="P:Ultz.XNFC.NfcDefRecord.Payload"/>s content.
+            </summary>
+        </member>
+        <member name="P:Ultz.XNFC.NfcDefRecord.Payload">
+            <summary>
+            Payload.
+            </summary>
+        </member>
+        <member name="T:Ultz.XNFC.TagDetectedEventArgs">
+            <inheritdoc/>
+        </member>
+        <member name="M:Ultz.XNFC.TagDetectedEventArgs.#ctor(Ultz.XNFC.ITag)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Ultz.XNFC.TagDetectedEventArgs"/> class.
+            </summary>
+            <param name="tag">Tag's content.</param>
+        </member>
+        <member name="P:Ultz.XNFC.TagDetectedEventArgs.Records">
+            <summary>
+            <see cref="T:Ultz.XNFC.ITag"/>'s content.
+            </summary>
+        </member>
+        <member name="P:Ultz.XNFC.TagDetectedEventArgs.Tag">
+            <summary>
+            The tag that triggered the NFC device.
+            </summary>
+        </member>
+        <member name="T:Ultz.XNFC.NDefTypeNameFormat">
+            <summary>
+            Format of the NDEF tag content.
+            </summary>
+        </member>
+        <member name="F:Ultz.XNFC.NDefTypeNameFormat.AbsoluteUri">
+            <summary>
+            URI based on the type field.
+            </summary>
+        </member>
+        <member name="F:Ultz.XNFC.NDefTypeNameFormat.Empty">
+            <summary>
+            Tag has no content.
+            </summary>
+        </member>
+        <member name="F:Ultz.XNFC.NDefTypeNameFormat.Media">
+            <summary>
+            MIME type based on the type field.
+            </summary>
+        </member>
+        <member name="F:Ultz.XNFC.NDefTypeNameFormat.External">
+            <summary>
+            URI based on the URN in the type field.
+            </summary>
+        </member>
+        <member name="F:Ultz.XNFC.NDefTypeNameFormat.WellKnown">
+            <summary>
+            MIME type or URI depending on the Record Type Definition (RTD)
+            </summary>
+        </member>
+        <member name="F:Ultz.XNFC.NDefTypeNameFormat.Unchanged">
+            <summary>
+            Invalid content in first record.
+            </summary>
+        </member>
+        <member name="F:Ultz.XNFC.NDefTypeNameFormat.Unknown">
+            <summary>
+            Tag has content but we don't know the type of content.
+            </summary>
+        </member>
+        <member name="T:Ultz.XNFC.ICrossNearFieldCommunication">
+            <summary>
+            Provides common NFC logic.
+            </summary>
+        </member>
+        <member name="E:Ultz.XNFC.ICrossNearFieldCommunication.TagDetected">
+            <summary>
+            Fires when a NFC tag is detected.
+            </summary>
+        </member>
+        <member name="P:Ultz.XNFC.ICrossNearFieldCommunication.Enabled">
+            <summary>
+            If the device's nfc reader is enabled.
+            </summary>
+        </member>
+        <member name="P:Ultz.XNFC.ICrossNearFieldCommunication.Available">
+            <summary>
+            If the device has a nfc reader.
+            </summary>
+        </member>
+        <member name="P:Ultz.XNFC.ICrossNearFieldCommunication.CanScan">
+            <summary>
+            If the device can scan for NFC tags.
+            </summary>
+        </member>
+        <member name="P:Ultz.XNFC.ICrossNearFieldCommunication.Scanning">
+            <summary>
+            If we are currently scanning for NFC tags.
+            </summary>
+        </member>
+        <member name="P:Ultz.XNFC.ICrossNearFieldCommunication.Association">
+            <summary>
+            Anything the NFC is associated with.
+            </summary>
+        </member>
+        <member name="M:Ultz.XNFC.ICrossNearFieldCommunication.StartListeningAsync">
+            <summary>
+            Makes <see cref="T:Ultz.XNFC.ICrossNearFieldCommunication"/> start listening for NFC tags.
+            </summary>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the asynchronous operation.</returns>
+        </member>
+        <member name="M:Ultz.XNFC.ICrossNearFieldCommunication.TryStartListeningAsync">
+            <summary>
+            Attempts to make <see cref="T:Ultz.XNFC.ICrossNearFieldCommunication"/> start listening for NFC tags.
+            </summary>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the asynchronous operation.</returns>
+        </member>
+        <member name="M:Ultz.XNFC.ICrossNearFieldCommunication.StopListeningAsync">
+            <summary>
+            Makes <see cref="T:Ultz.XNFC.ICrossNearFieldCommunication"/> stop listening for NFC tags.
+            </summary>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the asynchronous operation.</returns>
+        </member>
+        <member name="M:Ultz.XNFC.ICrossNearFieldCommunication.TryStopListeningAsync">
+            <summary>
+            Attempts to make <see cref="T:Ultz.XNFC.ICrossNearFieldCommunication"/> stop listening for NFC tags.
+            </summary>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the asynchronous operation.</returns>
+        </member>
+        <member name="M:Ultz.XNFC.ICrossNearFieldCommunication.Initialize">
+            <summary>
+            Initializes <see cref="T:Ultz.XNFC.ICrossNearFieldCommunication"/>.
+            </summary>
+        </member>
+        <member name="M:Ultz.XNFC.ICrossNearFieldCommunication.Callback(System.Object)">
+            <summary>
+            Invokes logic that fires <see cref="E:Ultz.XNFC.ICrossNearFieldCommunication.TagDetected"/>.
+            </summary>
+            <param name="obj">object with <see cref="T:Ultz.XNFC.ITag"/> logic.</param>
+        </member>
+        <member name="T:Ultz.XNFC.ITag">
+            <summary>
+            Tag inside of NFC device, contains all content of NFC device.
+            </summary>
+        </member>
+        <member name="P:Ultz.XNFC.ITag.Readable">
+            <summary>
+            If we can read the <see cref="T:Ultz.XNFC.ITag"/>'s content.
+            </summary>
+        </member>
+        <member name="P:Ultz.XNFC.ITag.Writable">
+            <summary>
+            If we can write to the <see cref="T:Ultz.XNFC.ITag"/>.
+            </summary>
+        </member>
+        <member name="P:Ultz.XNFC.ITag.Records">
+            <summary>
+            <see cref="T:Ultz.XNFC.ITag"/>'s content.
+            </summary>
+        </member>
+        <member name="M:Ultz.XNFC.ITag.Write(Ultz.XNFC.NfcDefRecord[])">
+            <summary>
+            Writes <see cref="!:records"/> to this <see cref="T:Ultz.XNFC.ITag"/>.
+            </summary>
+            <param name="records">Content to write to the <see cref="T:Ultz.XNFC.ITag"/>.</param>
+            <returns>If we was successful at writing all the content to the <see cref="T:Ultz.XNFC.ITag"/>.</returns>
+        </member>
+        <member name="M:Ultz.XNFC.XNFC.GetApi">
+            <summary>
+            Get's the api to use.
+            </summary>
+            <returns>Api to use.</returns>
+        </member>
+        <member name="M:Ultz.XNFC.XNFC.GloballyStartScanning(Ultz.XNFC.ICrossNearFieldCommunication)">
+            <summary>
+            Starts scanning for nfc tags.
+            </summary>
+            <param name="nfc"><see cref="T:Ultz.XNFC.ICrossNearFieldCommunication"/> to use.</param>
+        </member>
+        <member name="M:Ultz.XNFC.XNFC.TryGloballyStartScanning(Ultz.XNFC.ICrossNearFieldCommunication)">
+            <summary>
+            Attempts to start scanning for nfc tags.
+            </summary>
+            <param name="nfc"><see cref="T:Ultz.XNFC.ICrossNearFieldCommunication"/> to use.</param>
+        </member>
+        <member name="M:Ultz.XNFC.XNFC.GloballyStopScanning">
+            <summary>
+            Stops scanning for nfc tags.
+            </summary>
+        </member>
+        <member name="M:Ultz.XNFC.XNFC.TryGloballyStopScanning">
+            <summary>
+            Attempts to stop scanning for nfc tags.
+            </summary>
+        </member>
+        <member name="M:Ultz.XNFC.XNFC.GlobalCallback(System.Object)">
+            <summary>
+            Calls <see cref="M:Ultz.XNFC.ICrossNearFieldCommunication.Callback(System.Object)"/>.
+            </summary>
+            <param name="obj"><see cref="M:Ultz.XNFC.ICrossNearFieldCommunication.Callback(System.Object)"/> parameter.</param>
+        </member>
+    </members>
+</doc>

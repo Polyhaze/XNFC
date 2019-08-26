@@ -8,8 +8,7 @@ namespace Ultz.XNFC.Android
         {
             XNFC.GloballyAssociate(activity);
             XNFC.Register<AndroidNfc>();
-            var api= XNFC.GetApi();
-            return api;
+            return XNFC.GetApi();
         }
     }
 }
